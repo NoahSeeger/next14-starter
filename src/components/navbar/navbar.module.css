@@ -1,0 +1,82 @@
+.container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.active {
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+}
+
+.logout {
+  background-color: white;
+  border-radius: 5px;
+  border: 0px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.mobileLinks {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 50%;
+  height: calc(100vh - 100px);
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menuButton,
+.mobileLinks {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .menuButton {
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .mobileLinks {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
